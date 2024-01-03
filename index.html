@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1"
     />
-    <title>Voice Translator</title>
+    <title>🤩Voice Translator🤩</title>
 
     <!-- Lemix Icon Link -->
     <link
@@ -22,6 +22,83 @@
   </head>
 
   <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <h2>🤩 Voice Translator 🤩</h2>
+        </div>
+      </header>
+
+      <section>
+        <div class="container">
+          <!-- 번역할 박스 -->
+          <div class="lang-from lang-box">
+            <textarea
+              placeholder="번역할 내용을 입력하세요."
+              id="search_console"
+            ></textarea>
+          </div>
+
+          <!-- 언어 변경 스위치 시작 -->
+          <div class="select-lang">
+            <div class="select-btns">
+              <button id="ko">한국어</button>
+
+              <div class="switch-btns-wrapper">
+                <div class="switch-btn">
+                  <span><i class="ri-arrow-left-right-line"></i></span>
+                </div>
+              </div>
+
+              <select>
+                <option class="active" value="en">영어</option>
+                <option value="ja">일본어</option>
+                <option value="zh-CN">중국어(간체)</option>
+                <option value="zh-TW">중국어(번체)</option>
+                <option value="es">스페인어</option>
+                <option value="fr">프랑스어</option>
+              </select>
+            </div>
+          </div>
+          <!-- 언어 변경 스위치 끝 -->
+
+          <!-- 번역된 박스 -->
+          <div class="lang-to lang-box">
+            <textarea id="text"></textarea>
+            <div class="lds-ring">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <!-- 사운드 버튼 -->
+            <div class="sound-btn-box">
+              <button class="sound-text">
+                <i class="ri-volume-up-fill"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- 말하기 & 멈추기 버튼 -->
+          <div class="voice-btns">
+            <button class="v-start active" onclick="startRecord()">
+              <i class="ri-mic-fill"></i>말하기
+            </button>
+            <button class="v-stop" onclick="endRecord()">
+              <i class="ri-mic-fill"></i>멈추기
+            </button>
+          </div>
+
+          <!-- 번역하기 버튼 -->
+          <div class="result-btn-box">
+            <button class="translate">
+              <i class="ri-translate-2"></i>번역하기
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
     <!-- Main Script Link -->
     <script src="js/custom.js"></script>
   </body>
